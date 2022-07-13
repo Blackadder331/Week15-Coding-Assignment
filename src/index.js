@@ -8,7 +8,10 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Houses for Sale</h1>
+    <div className='container'>
+    <h1 className='col'>Brokerage Inventory</h1>
+    <br></br>
+    </div>
     <App />
   </React.StrictMode>
 );
