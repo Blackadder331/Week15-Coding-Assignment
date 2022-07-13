@@ -37,7 +37,7 @@ export const NewRoomForm = (props) => {
                     onChange={handleAreaInput}
                     value={area}
                 />
-                <button type='submit'>Add Room</button>
+                <button type='submit' className="btn btn-success">Add Room</button>
             </form>
         </div>
     )

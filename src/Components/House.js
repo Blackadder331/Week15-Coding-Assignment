@@ -2,6 +2,8 @@ import React from "react";
 import { NewRoomForm } from './NewRoomForm';
 import HousesList from './HousesList';
 
+
+
 export const House = (props) => {
     const { house, updateHouse } = props; 
 
@@ -20,7 +22,7 @@ export const House = (props) => {
           {house.rooms.map((room, index) => (
             <li key ={index}>
                 <label> {`${room.name} Area: ${room.area}`} </label>
-                <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
+                <button className="btn btn-sm btn-outline-dark" onClick={(e) => deleteRoom(room._id)}>Delete</button>
             </li>
           ))}  
         </ul>
@@ -28,11 +30,19 @@ export const House = (props) => {
 
     return (
         <div>
-            <h1>{house.name}</h1>
-            {
-                rooms({ rooms, houseId: house._id, deleteRoom})
-            }
-            <NewRoomForm addNewRoom={addNewRoom} />
+            <div className="container">
+                    <div className="col-md">
+                        <div className="card card-body">
+                        <h1>{house.name}</h1>
+                        {
+                            rooms({ rooms, houseId: house._id, deleteRoom})
+                        }
+                        <NewRoomForm addNewRoom={addNewRoom} />
+                        
+                        </div>
+                    </div>
+                    <br />
+            </div>
         </div>
     );
 
