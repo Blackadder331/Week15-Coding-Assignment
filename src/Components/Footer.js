@@ -9,15 +9,15 @@ export const Footer = () => {
         href="/"
         className="d-flex align-items-center mb-3 link-dark text-decoration-none"
       >
-        <svg className="bi me-2" width={40} height={32}>
-          <use xlinkHref="#bootstrap" />
-        </svg>
+       <img className="footer-logo" src="orden-tower.png" alt="Orden INV" />
       </a>
-      <p className="text-muted">© 2022</p>
+      <br></br>
+      <p className="text-muted">Copyright © 2022 <br/>Orden INV, LLC </p>
     </div>
     <div className="col mb-3"></div>
     <div className="col mb-3">
-      <h5>Section</h5>
+      <h5>Vinyard Estate
+      </h5>
       <ul className="nav flex-column">
         <li className="nav-item mb-2">
           <a href="#" className="nav-link p-0 text-muted">
@@ -47,7 +47,7 @@ export const Footer = () => {
       </ul>
     </div>
     <div className="col mb-3">
-      <h5>Section</h5>
+      <h5>Crofter House</h5>
       <ul className="nav flex-column">
         <li className="nav-item mb-2">
           <a href="#" className="nav-link p-0 text-muted">
@@ -77,7 +77,7 @@ export const Footer = () => {
       </ul>
     </div>
     <div className="col mb-3">
-      <h5>Section</h5>
+      <h5>Blair Skyrise</h5>
       <ul className="nav flex-column">
         <li className="nav-item mb-2">
           <a href="#" className="nav-link p-0 text-muted">

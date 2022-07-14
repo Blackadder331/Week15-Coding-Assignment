@@ -8,7 +8,7 @@ export const Nav = () => {
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container">
             <a className="navbar-brand" href="#">
-            ORDEN INV
+            <img src="orden-tower-logo.png" alt="Orden INV" />
             </a>
             <button
             className="navbar-toggler"
