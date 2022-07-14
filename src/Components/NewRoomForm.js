@@ -26,12 +26,14 @@ export const NewRoomForm = (props) => {
             <h4>Add a new room</h4>
             <form onSubmit={onSubmit}>
                 <input
+                    className="inputCustom"
                     type='text'
                     placeholder='name'
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                 />
                 <input
+                    className="inputCustom"
                     type='text'
                     placeholder='area'
                     onChange={handleAreaInput}

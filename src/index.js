@@ -4,15 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import { Footer } from './Components/Footer';
+import { Nav } from './Components/Nav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Nav />
     <div className='container'>
-    <h1 className='col'>Brokerage Inventory</h1>
+    <h2 className='col'><strong>Brokerage Inventory</strong></h2>
     <br></br>
     </div>
     <App />
+    <Footer />
   </React.StrictMode>
 );
 
