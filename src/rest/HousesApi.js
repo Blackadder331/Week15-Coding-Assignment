@@ -29,7 +29,26 @@ class HousesApi {
             console.log('Oops, updating houses had an issue.', e);
         }
     }
+
+    // DELETE REQUEST
+    del = async (house) => {
+        console.log(house)
+        await fetch(`https://ancient-taiga-31359.herokuapp.com/api/houses/${house._id}`,  {
+        method: 'DELETE'
+        })
+    }
 }
+
+
+// DELETE REQUEST
+// (async () => {
+//     // DELETE request using fetch with async/await
+//     const element = document.querySelector('#delete-request-async-await .status');
+//     await fetch(`${HOUSES_ENDPOINT}/${house._id}`, { method: 'DELETE' });
+//     console.log('Delete successful');
+// })();
+
+
 
 export const housesApi = new HousesApi();
 

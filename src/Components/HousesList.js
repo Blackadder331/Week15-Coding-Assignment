@@ -14,12 +14,17 @@ export class HousesList extends React.Component {
     fetchHouses = async () => {
         const houses = await housesApi.get();
         this.setState({ houses });
+        console.log('Test123');
     };
 
     updateHouse = async (updatedHouse) => {
         await housesApi.put(updatedHouse);
         this.fetchHouses();
     };
+
+    // updateState() {
+    //     this.setState
+    // }
 
     render() {
         return (
@@ -29,6 +34,7 @@ export class HousesList extends React.Component {
                         house={house}
                         key={house._id}
                         updateHouse={this.updateHouse}
+                        updateState={this.fetchHouses}
                     />
                 ))}
             </div>

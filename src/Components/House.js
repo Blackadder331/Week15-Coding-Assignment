@@ -1,11 +1,11 @@
 import React from "react";
 import { NewRoomForm } from './NewRoomForm';
 import HousesList from './HousesList';
-
+import { housesApi } from "../rest/HousesApi";
 
 
 export const House = (props) => {
-    const { house, updateHouse } = props; 
+    const { house, updateHouse, updateState } = props; 
 
     const deleteRoom = (roomId) => {
         const updatedHouse = {
@@ -28,12 +28,22 @@ export const House = (props) => {
         </ul>
     );
 
+
+    function deleteSomething() {
+        housesApi.del(house)
+        console.log('delete')
+        updateState();
+    }
+
+
+
     return (
         <div>
             <div className="container">
                     <div className="col-md">
                         <div className="card card-body">
                         <h1>{house.name}</h1>
+                        <button className="house-delete" onClick={deleteSomething}>Delete House</button>
                         {
                             rooms({ rooms, houseId: house._id, deleteRoom})
                         }
