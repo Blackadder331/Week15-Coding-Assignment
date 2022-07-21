@@ -9,7 +9,8 @@ import { Nav } from './Components/Nav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <Nav />
     <div className='container'>
     <h2 className='col'><strong>Brokerage Inventory</strong></h2>
@@ -17,7 +18,8 @@ root.render(
     </div>
     <App />
     <Footer />
-  </React.StrictMode>
+  </>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
